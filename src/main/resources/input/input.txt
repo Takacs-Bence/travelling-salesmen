@@ -1,0 +1,19 @@
+# Example input file for complete graph with PNW cities and distances
+
+# PNW Cities
+/start-cities
+4
+Seattle
+Portland
+Vancouver
+Spokane
+
+# Distances (weighted edges)
+/start-connections
+6
+Seattle    Portland    173
+Seattle    Vancouver   142
+Seattle    Spokane     279
+Portland   Vancouver   313
+Portland   Spokane     509
+Vancouver  Spokane     348
