@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * uses adjacency-list to represent graph, because we will be iterating over neighbours a lot, <br>
@@ -29,6 +30,7 @@ public class Graph {
     }
 
     public void setStartingPoint(String startingPoint) {
+        startingPoint = startingPoint.toUpperCase();
         this.startingPoint = startingPoint;
     }
 
@@ -37,6 +39,7 @@ public class Graph {
     }
 
     public void setDestination(String destination) {
+        destination = destination.toUpperCase();
         this.destination = destination;
     }
 
@@ -81,6 +84,14 @@ public class Graph {
         String startingPoint = getStartingPoint();
         boolean connectionsEmpty = connections.isEmpty();
         return startingPoint != null && !startingPoint.isEmpty() && destination != null && !destination.isEmpty() && !connectionsEmpty;
+    }
+
+    public Set<String> keySet() {
+        return this.connections.keySet();
+    }
+
+    public List<Connection> getConnections(String city) {
+        return this.connections.get(city);
     }
 
     static class Connection {

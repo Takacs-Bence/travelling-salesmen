@@ -18,10 +18,9 @@ Vancouver
 Spokane
 
 /start-connections
-6
+5
 Seattle    Portland    173
 Seattle    Vancouver   142
-Seattle    Spokane     279
 Portland   Vancouver   313
 Portland   Spokane     509
 Vancouver  Spokane     348
@@ -35,4 +34,9 @@ the connections are undirected at this point <br>
 
 the app finds the shortest path (with Dijkstra's algorithm) from starting point to destination and prints it to the console.
 
-TODO: currently only the parsing and building the graph is implemented. not the algo itself.
+example output for the input here:
+```
+Shortest Path: SEATTLE -> VANCOUVER -> SPOKANE, Distance: 490 km
+```
+
+because the shortest path is with the starting point of Seattle (0), <br> we travel to Vancouver (142) and then to Spokane (348). 142 + 348 = 490.

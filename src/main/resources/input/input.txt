@@ -10,10 +10,9 @@ Spokane
 
 # Distances (weighted edges)
 /start-connections
-6
+5
 Seattle    Portland    173
 Seattle    Vancouver   142
-Seattle    Spokane     279
 Portland   Vancouver   313
 Portland   Spokane     509
 Vancouver  Spokane     348

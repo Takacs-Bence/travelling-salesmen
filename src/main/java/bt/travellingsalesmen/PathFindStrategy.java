@@ -18,4 +18,13 @@ public enum PathFindStrategy {
     public String getName() {
         return this.name;
     }
+
+    public static PathFindStrategy findByName(String name) {
+        for (PathFindStrategy strategy : PathFindStrategy.values()) {
+            if (strategy.getName().equalsIgnoreCase(name)) {
+                return strategy;
+            }
+        }
+        return null;
+    }
 }
